@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dd4uyfgd7fk2l"]
+
+[ext_resource type="PackedScene" uid="uid://bife5jl7swtpm" path="res://maps/map1_walls.tscn" id="1_wwpf4"]
+[ext_resource type="PackedScene" uid="uid://cgs78l71g2ud2" path="res://maps/map1_floor.tscn" id="2_m7ahb"]
+[ext_resource type="PackedScene" uid="uid://bhlsc0xr18iq1" path="res://player/player.tscn" id="3_m7ahb"]
+
+[node name="Level1" type="Node2D" unique_id=1653440636]
+
+[node name="map1_floor" parent="." unique_id=1621095282 instance=ExtResource("2_m7ahb")]
+
+[node name="map1_walls" parent="." unique_id=2133503530 instance=ExtResource("1_wwpf4")]
+
+[node name="Player" parent="." unique_id=1880850753 instance=ExtResource("3_m7ahb")]
+position = Vector2(55, 45)

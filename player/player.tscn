@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://bhlsc0xr18iq1"]
+
+[ext_resource type="Script" uid="uid://dk47d75uw7cxn" path="res://player/player.gd" id="1_e7oew"]
+[ext_resource type="Texture2D" uid="uid://kdfgaoivxpma" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_attack0.png" id="1_tqiix"]
+[ext_resource type="Texture2D" uid="uid://m4ukbo4imm54" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_attack1.png" id="2_e7oew"]
+[ext_resource type="Texture2D" uid="uid://c6aaqa4cu8dih" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_attack2.png" id="3_c35mf"]
+[ext_resource type="Texture2D" uid="uid://bh81t5vfp5xva" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_hit.png" id="4_65viv"]
+[ext_resource type="Texture2D" uid="uid://dd6sxt4c8r8r2" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_idle.png" id="5_x7c3f"]
+[ext_resource type="Texture2D" uid="uid://dg4un62m26v7g" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_interact.png" id="6_bjvpn"]
+[ext_resource type="Texture2D" uid="uid://dn4ut60gunk5f" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_run0.png" id="7_s7qer"]
+[ext_resource type="Texture2D" uid="uid://cx205kfk0x4o4" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_run1.png" id="8_g4c7l"]
+[ext_resource type="Texture2D" uid="uid://b43kjksvgt5o0" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_run2.png" id="9_knn7v"]
+[ext_resource type="Texture2D" uid="uid://deffmqq6rq6kj" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk0.png" id="10_7pqkx"]
+[ext_resource type="Texture2D" uid="uid://pm4x8nw2rota" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk1.png" id="11_uw77l"]
+[ext_resource type="Texture2D" uid="uid://bey5a51rbphi3" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk2.png" id="12_rptt4"]
+[ext_resource type="Texture2D" uid="uid://b63g34mjpra48" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk3.png" id="13_r7pn3"]
+[ext_resource type="Texture2D" uid="uid://ctt2hdks3ka0r" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk4.png" id="14_b8hi5"]
+[ext_resource type="Texture2D" uid="uid://ce276m3yohflv" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk5.png" id="15_2uvqg"]
+[ext_resource type="Texture2D" uid="uid://e0rvtuvtflfv" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk6.png" id="16_1s1yo"]
+[ext_resource type="Texture2D" uid="uid://ccutv4aj7sgg4" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk7.png" id="17_5ejfk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ks6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tqiix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e7oew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c35mf")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_65viv")
+}],
+"loop": 1,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_x7c3f")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bjvpn")
+}],
+"loop": 1,
+"name": &"interact",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_s7qer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g4c7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_knn7v")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7pqkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uw77l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rptt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r7pn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b8hi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2uvqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1s1yo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5ejfk")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tb2wy"]
+radius = 43.0
+height = 106.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1880850753]
+script = ExtResource("1_e7oew")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1304305648]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_7ks6q")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754078015]
+visible = false
+position = Vector2(0, 7)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_tb2wy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=85027238]
