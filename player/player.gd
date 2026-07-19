@@ -45,20 +45,20 @@ func _physics_process(_delta: float) -> void:
 	direction = direction.normalized()
 	
 	if is_attacking:
-		current_speed = 0
 		$AnimatedSprite2D.play("attack")
-	elif is_interacting:
 		current_speed = 0
+	elif is_interacting:
 		$AnimatedSprite2D.play("interact")
+		current_speed = 0
 	elif is_running and is_attacking == false:
-		current_speed = SPEED * 2
 		$AnimatedSprite2D.play("run")
+		current_speed = SPEED * 2
 	elif direction.length() > 0 and is_running == false:
 		$AnimatedSprite2D.play("walk")
 		current_speed = SPEED
 	else:
 		$AnimatedSprite2D.play("idle")
-		
+		current_speed = 0
 	
 	if direction.x > 0:
 		$AnimatedSprite2D.flip_h = false
