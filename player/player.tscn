@@ -113,7 +113,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tb2wy"]
-radius = 43.0
+radius = 36.0
 height = 106.0
 
 [sub_resource type="Animation" id="Animation_c35mf"]
@@ -161,7 +161,7 @@ texture_filter = 1
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_7ks6q")
 animation = &"hit"
-frame_progress = 0.026561571
+frame_progress = 0.7880621
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754078015]
 visible = false

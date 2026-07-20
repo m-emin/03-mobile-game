@@ -24,7 +24,7 @@ func _take_dmg(amount: int) -> void:
 	hp -= amount
 	hp_changed.emit(hp)
 	if hp <= 0:
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.15).timeout
 		get_tree().call_deferred("change_scene_to_packed", game_over)
 
 func _check_double_tap(action: String) -> bool:

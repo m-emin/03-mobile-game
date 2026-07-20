@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://bhlsc0xr18iq1" path="res://player/player.tscn" id="3_m7ahb"]
 [ext_resource type="Script" uid="uid://ciyaj0a2s2ugs" path="res://scenes/canvas_layer.gd" id="5_ru4tf"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejswk"]
+bg_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ru4tf"]
+bg_color = Color(1, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+
 [node name="Level1" type="Node2D" unique_id=1653440636]
 
 [node name="map1_floor" parent="." unique_id=1621095282 instance=ExtResource("2_m7ahb")]
@@ -119,8 +126,20 @@ script = ExtResource("5_ru4tf")
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1506223620]
 offset_left = 64.0
 offset_top = 1024.0
-offset_right = 200.0
+offset_right = 136.0
 offset_bottom = 1080.0
-theme_override_font_sizes/font_size = 30
-text = "HP: 100"
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "HP:"
 vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1358460980]
+offset_left = 136.0
+offset_top = 1037.0
+offset_right = 320.0
+offset_bottom = 1071.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/background = SubResource("StyleBoxFlat_ejswk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ru4tf")
+step = 1.0
+value = 100.0

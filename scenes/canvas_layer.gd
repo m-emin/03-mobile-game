@@ -11,4 +11,4 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_hp_changed(new_hp: int) -> void:
-	$Label.text = "HP: " + str(new_hp)
+	$ProgressBar.value = new_hp

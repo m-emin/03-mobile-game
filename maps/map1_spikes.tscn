@@ -4,12 +4,13 @@
 [ext_resource type="Script" uid="uid://chmqiu50li6cm" path="res://maps/map_1_spikes.gd" id="1_r63o7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2wy"]
-size = Vector2(16, 16)
+size = Vector2(14, 15)
 
 [node name="map1_spikes" type="Area2D" unique_id=316532680]
 script = ExtResource("1_r63o7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2029142740]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_tb2wy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=949625151]
