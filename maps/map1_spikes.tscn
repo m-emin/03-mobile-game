@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://g6iror2taldn"]
+
+[ext_resource type="Texture2D" uid="uid://igo50efqfk7a" path="res://assets/kenney_assets/Tiny Dungeon/Tiles/tile_0041.png" id="1_jqfc6"]
+[ext_resource type="Script" uid="uid://chmqiu50li6cm" path="res://maps/map_1_spikes.gd" id="1_r63o7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2wy"]
+size = Vector2(16, 16)
+
+[node name="map1_spikes" type="Area2D" unique_id=316532680]
+script = ExtResource("1_r63o7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2029142740]
+shape = SubResource("RectangleShape2D_tb2wy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=949625151]
+texture = ExtResource("1_jqfc6")
+
+[node name="Timer" type="Timer" parent="." unique_id=1105106574]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

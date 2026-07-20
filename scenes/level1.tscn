@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dd4uyfgd7fk2l"]
 
+[ext_resource type="PackedScene" uid="uid://g6iror2taldn" path="res://maps/map1_spikes.tscn" id="1_dwgg1"]
 [ext_resource type="PackedScene" uid="uid://bife5jl7swtpm" path="res://maps/map1_walls.tscn" id="1_wwpf4"]
 [ext_resource type="PackedScene" uid="uid://cgs78l71g2ud2" path="res://maps/map1_floor.tscn" id="2_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://bhlsc0xr18iq1" path="res://player/player.tscn" id="3_m7ahb"]
@@ -10,5 +11,114 @@
 
 [node name="map1_walls" parent="." unique_id=2133503530 instance=ExtResource("1_wwpf4")]
 
+[node name="Spikes" type="Node2D" parent="." unique_id=1688707498]
+
+[node name="map1_spikes" parent="Spikes" unique_id=316532680 instance=ExtResource("1_dwgg1")]
+position = Vector2(232, 24)
+
+[node name="map1_spikes2" parent="Spikes" unique_id=341782218 instance=ExtResource("1_dwgg1")]
+position = Vector2(232, 40)
+
+[node name="map1_spikes3" parent="Spikes" unique_id=1501559018 instance=ExtResource("1_dwgg1")]
+position = Vector2(248, 24)
+
+[node name="map1_spikes4" parent="Spikes" unique_id=1875081241 instance=ExtResource("1_dwgg1")]
+position = Vector2(248, 40)
+
+[node name="map1_spikes5" parent="Spikes" unique_id=1938266315 instance=ExtResource("1_dwgg1")]
+position = Vector2(264, 24)
+
+[node name="map1_spikes6" parent="Spikes" unique_id=1411756976 instance=ExtResource("1_dwgg1")]
+position = Vector2(264, 40)
+
+[node name="map1_spikes7" parent="Spikes" unique_id=377287246 instance=ExtResource("1_dwgg1")]
+position = Vector2(280, 24)
+
+[node name="map1_spikes8" parent="Spikes" unique_id=729878504 instance=ExtResource("1_dwgg1")]
+position = Vector2(280, 40)
+
+[node name="map1_spikes9" parent="Spikes" unique_id=128772329 instance=ExtResource("1_dwgg1")]
+position = Vector2(296, 24)
+
+[node name="map1_spikes10" parent="Spikes" unique_id=2018119346 instance=ExtResource("1_dwgg1")]
+position = Vector2(296, 40)
+
+[node name="map1_spikes11" parent="Spikes" unique_id=610669354 instance=ExtResource("1_dwgg1")]
+position = Vector2(744, 520)
+
+[node name="map1_spikes12" parent="Spikes" unique_id=1271663035 instance=ExtResource("1_dwgg1")]
+position = Vector2(744, 536)
+
+[node name="map1_spikes13" parent="Spikes" unique_id=1771862197 instance=ExtResource("1_dwgg1")]
+position = Vector2(760, 520)
+
+[node name="map1_spikes14" parent="Spikes" unique_id=288869599 instance=ExtResource("1_dwgg1")]
+position = Vector2(760, 536)
+
+[node name="map1_spikes15" parent="Spikes" unique_id=472402284 instance=ExtResource("1_dwgg1")]
+position = Vector2(776, 520)
+
+[node name="map1_spikes16" parent="Spikes" unique_id=911469264 instance=ExtResource("1_dwgg1")]
+position = Vector2(776, 536)
+
+[node name="map1_spikes17" parent="Spikes" unique_id=1584809067 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 520)
+
+[node name="map1_spikes18" parent="Spikes" unique_id=617627989 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 536)
+
+[node name="map1_spikes19" parent="Spikes" unique_id=723958323 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 520)
+
+[node name="map1_spikes20" parent="Spikes" unique_id=1904499010 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 536)
+
+[node name="map1_spikes21" parent="Spikes" unique_id=1677014686 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 552)
+
+[node name="map1_spikes22" parent="Spikes" unique_id=367086646 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 568)
+
+[node name="map1_spikes23" parent="Spikes" unique_id=1420882099 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 552)
+
+[node name="map1_spikes24" parent="Spikes" unique_id=82527839 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 568)
+
+[node name="map1_spikes25" parent="Spikes" unique_id=660249638 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 584)
+
+[node name="map1_spikes26" parent="Spikes" unique_id=1713151874 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 600)
+
+[node name="map1_spikes27" parent="Spikes" unique_id=414697138 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 584)
+
+[node name="map1_spikes28" parent="Spikes" unique_id=2102089143 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 600)
+
+[node name="map1_spikes29" parent="Spikes" unique_id=375914722 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 616)
+
+[node name="map1_spikes30" parent="Spikes" unique_id=1765418201 instance=ExtResource("1_dwgg1")]
+position = Vector2(792, 632)
+
+[node name="map1_spikes31" parent="Spikes" unique_id=694191606 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 616)
+
+[node name="map1_spikes32" parent="Spikes" unique_id=159203055 instance=ExtResource("1_dwgg1")]
+position = Vector2(808, 632)
+
 [node name="Player" parent="." unique_id=1880850753 instance=ExtResource("3_m7ahb")]
 position = Vector2(55, 45)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218111827]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1506223620]
+offset_left = 64.0
+offset_top = 1024.0
+offset_right = 200.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 30
+text = "HP: 100"
+vertical_alignment = 1

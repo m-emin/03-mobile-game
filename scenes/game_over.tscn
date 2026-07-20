@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dcrsygmsdnxhf"]
+
+[ext_resource type="Script" uid="uid://dfc5whpei3nnw" path="res://scenes/game_over.gd" id="1_xeevv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sx5pl"]
+font_size = 60
+
+[node name="GameOver" type="Control" unique_id=870896346]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xeevv")
+
+[node name="Label" type="Label" parent="." unique_id=819446220]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 376.0
+offset_right = 1152.0
+offset_bottom = 512.0
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_sx5pl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=31706615]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 512.0
+offset_right = 1152.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 40
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

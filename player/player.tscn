@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dd6sxt4c8r8r2" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_idle.png" id="5_x7c3f"]
 [ext_resource type="Texture2D" uid="uid://dg4un62m26v7g" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_interact.png" id="6_bjvpn"]
 [ext_resource type="Texture2D" uid="uid://dn4ut60gunk5f" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_run0.png" id="7_s7qer"]
+[ext_resource type="Texture2D" uid="uid://dltp5y84knuvm" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_drag.png" id="7_x7c3f"]
 [ext_resource type="Texture2D" uid="uid://cx205kfk0x4o4" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_run1.png" id="8_g4c7l"]
 [ext_resource type="Texture2D" uid="uid://b43kjksvgt5o0" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_run2.png" id="9_knn7v"]
 [ext_resource type="Texture2D" uid="uid://deffmqq6rq6kj" path="res://assets/kenney_assets/Male person/PNG/Poses/character_malePerson_walk0.png" id="10_7pqkx"]
@@ -41,6 +42,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_x7c3f")
+}],
+"loop": 1,
+"name": &"hold",
 "speed": 5.0
 }, {
 "frames": [{
@@ -107,14 +116,52 @@ animations = [{
 radius = 43.0
 height = 106.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1880850753]
+[sub_resource type="Animation" id="Animation_c35mf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_65viv"]
+resource_name = "hit_flash"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x7c3f"]
+_data = {
+&"RESET": SubResource("Animation_c35mf"),
+&"hit_flash": SubResource("Animation_65viv")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=1880850753 groups=["player"]]
 script = ExtResource("1_e7oew")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1304305648]
 texture_filter = 1
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_7ks6q")
-animation = &"idle"
+animation = &"hit"
+frame_progress = 0.025903719
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754078015]
 visible = false
@@ -128,3 +175,12 @@ limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 656
+
+[node name="Timer" type="Timer" parent="." unique_id=2039856312]
+wait_time = 0.3
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1254913859]
+libraries/ = SubResource("AnimationLibrary_x7c3f")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
