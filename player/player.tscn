@@ -161,7 +161,7 @@ texture_filter = 1
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_7ks6q")
 animation = &"hit"
-frame_progress = 0.025903719
+frame_progress = 0.026561571
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754078015]
 visible = false

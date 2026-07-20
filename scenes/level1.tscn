@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bife5jl7swtpm" path="res://maps/map1_walls.tscn" id="1_wwpf4"]
 [ext_resource type="PackedScene" uid="uid://cgs78l71g2ud2" path="res://maps/map1_floor.tscn" id="2_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://bhlsc0xr18iq1" path="res://player/player.tscn" id="3_m7ahb"]
+[ext_resource type="Script" uid="uid://ciyaj0a2s2ugs" path="res://scenes/canvas_layer.gd" id="5_ru4tf"]
 
 [node name="Level1" type="Node2D" unique_id=1653440636]
 
@@ -113,6 +114,7 @@ position = Vector2(808, 632)
 position = Vector2(55, 45)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218111827]
+script = ExtResource("5_ru4tf")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1506223620]
 offset_left = 64.0

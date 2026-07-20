@@ -15,11 +15,14 @@ var is_hit: bool = false
 
 var hp: int = 100
 
+signal hp_changed(new_hp: int)
+
 func _take_dmg(amount: int) -> void:
 	$AnimationPlayer.play("hit_flash")
 	is_hit = true
 	$Timer.start()
 	hp -= amount
+	hp_changed.emit(hp)
 	if hp <= 0:
 		await get_tree().create_timer(0.3).timeout
 		get_tree().call_deferred("change_scene_to_packed", game_over)
