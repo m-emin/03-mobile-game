@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgs78l71g2ud2" path="res://maps/map1_floor.tscn" id="2_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://bhlsc0xr18iq1" path="res://player/player.tscn" id="3_m7ahb"]
 [ext_resource type="Script" uid="uid://ciyaj0a2s2ugs" path="res://scenes/canvas_layer.gd" id="5_ru4tf"]
+[ext_resource type="PackedScene" uid="uid://bvrp2orrkb85s" path="res://scenes/pause_menu.tscn" id="6_6sh32"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejswk"]
 bg_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
@@ -143,3 +144,6 @@ theme_override_styles/background = SubResource("StyleBoxFlat_ejswk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ru4tf")
 step = 1.0
 value = 100.0
+
+[node name="PauseMenu" parent="." unique_id=78390771 instance=ExtResource("6_6sh32")]
+visible = false
